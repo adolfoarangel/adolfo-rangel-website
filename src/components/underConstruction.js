@@ -9,6 +9,10 @@ const Container = styled.div`
   justify-content: center;
   align-content: center;
   padding: 20vh;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `
 
 export default props => (

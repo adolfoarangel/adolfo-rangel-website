@@ -36,9 +36,9 @@ const ListLinkUl = styled.ul`
 
   @media (max-width: 768px) {
     display: ${props => (props.trigger ? "flex" : "none")};
+    flex-direction: column;
     position: absolute;
     top: 50px;
-    flex-direction: column;
     width: 100%;
     padding: 0;
     background-color: #000;
@@ -48,6 +48,10 @@ const ListLinkUl = styled.ul`
 const ListLinkLi = styled.li`
   display: inline-block;
   margin: 14px 16px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `
 
 const ListLink = props => (
