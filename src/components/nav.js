@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { FaBars } from "react-icons/fa"
+import { FaBars, FaTimes } from "react-icons/fa"
 
 const NavBar = styled.nav`
   display: flex;
@@ -23,6 +23,13 @@ const RoutingLink = styled(Link)`
 `
 
 const MenuIcon = styled(FaBars)`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: inline;
+  }
+`
+const CloseIcon = styled(FaTimes)`
   display: none;
 
   @media (max-width: 768px) {
@@ -70,7 +77,13 @@ export default () => {
       <RoutingLink to="/">
         <Header>Adolfo Rangel</Header>
       </RoutingLink>
-      <MenuIcon onClick={() => setToggleMenu(!toggleMenu)} />
+
+      {toggleMenu ? (
+        <CloseIcon onClick={() => setToggleMenu(!toggleMenu)} />
+      ) : (
+        <MenuIcon onClick={() => setToggleMenu(!toggleMenu)} />
+      )}
+
       <ListLinkUl trigger={toggleMenu}>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/about/">About</ListLink>
