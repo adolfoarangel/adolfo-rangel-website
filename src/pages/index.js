@@ -10,6 +10,10 @@ const Hero = styled.div`
   align-content: center;
   justify-content: center;
   padding: 10vh 0vh;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `
 
 const Paragraph = styled.p`
