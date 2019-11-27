@@ -2,18 +2,19 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { FaBars, FaTimes } from "react-icons/fa"
+import SvgLogo from "./svgLogo"
 
 const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  margin-top: 24px;
   position: relative;
-`
 
-const Header = styled.h3`
-  display: inline;
-  font-size: 1.5rem;
+  @media (max-width: 768px) {
+    height: 50px;
+    margin-top: 0px;
+  }
 `
 
 const RoutingLink = styled(Link)`
@@ -24,6 +25,7 @@ const RoutingLink = styled(Link)`
 
 const MenuIcon = styled(FaBars)`
   display: none;
+  height: 30px;
 
   @media (max-width: 768px) {
     display: inline;
@@ -31,6 +33,7 @@ const MenuIcon = styled(FaBars)`
 `
 const CloseIcon = styled(FaTimes)`
   display: none;
+  height: 30px;
 
   @media (max-width: 768px) {
     display: inline;
@@ -47,6 +50,7 @@ const ListLinkUl = styled.ul`
     position: absolute;
     top: 50px;
     width: 100%;
+    margin: 0;
     padding: 0;
     background-color: #000;
   }
@@ -58,12 +62,19 @@ const ListLinkLi = styled.li`
 
   @media (max-width: 768px) {
     text-align: center;
+    margin: 16px;
   }
 `
 
 const ListLink = props => (
   <ListLinkLi>
-    <RoutingLink to={props.to} activeStyle={{ color: "white" }}>
+    <RoutingLink
+      to={props.to}
+      activeStyle={{
+        color: "white",
+        borderBottom: "2px solid white",
+      }}
+    >
       {props.children}
     </RoutingLink>
   </ListLinkLi>
@@ -75,18 +86,17 @@ export default () => {
   return (
     <NavBar>
       <RoutingLink to="/">
-        <Header>Adolfo Rangel</Header>
+        <SvgLogo />
       </RoutingLink>
 
       {toggleMenu ? (
-        <CloseIcon onClick={() => setToggleMenu(!toggleMenu)} />
+        <CloseIcon size={25} onClick={() => setToggleMenu(!toggleMenu)} />
       ) : (
-        <MenuIcon onClick={() => setToggleMenu(!toggleMenu)} />
+        <MenuIcon size={25} onClick={() => setToggleMenu(!toggleMenu)} />
       )}
 
       <ListLinkUl trigger={toggleMenu}>
         <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
         <ListLink to="/now/">Now</ListLink>
         <ListLink to="/blog/">Blog</ListLink>
         <ListLink to="/recommendations/">Recommendations</ListLink>
