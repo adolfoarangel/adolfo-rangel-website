@@ -97,7 +97,6 @@ export default () => {
 
       <ListLinkUl trigger={toggleMenu}>
         <ListLink to="/">Home</ListLink>
-        <ListLink to="/now/">Now</ListLink>
         <ListLink to="/blog/">Blog</ListLink>
         <ListLink to="/recommendations/">Recommendations</ListLink>
       </ListLinkUl>
