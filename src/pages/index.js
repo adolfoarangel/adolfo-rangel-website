@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import Header from "../components/header"
+import { Header } from "../components/header"
 import SubHeader from "../components/subheader"
 
 const Hero = styled.div`
@@ -40,14 +40,6 @@ const CodeLine = styled.h4`
   font-weight: 600;
   font-size: 1.3rem;
   margin: 0px;
-`
-
-const Button = styled(Link)`
-  background: ${props => props.theme.secondaryColor};
-  border-radius: 10px;
-  padding: 10px;
-  text-decoration: none;
-  color: white;
 `
 
 const Select = styled.select`
