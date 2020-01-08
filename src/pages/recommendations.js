@@ -47,5 +47,10 @@ export default () => (
     </ul>
 
     <SubHeader headerText="Books"/>
+    <p>Currently I believe I haven't read enough books to really give a good recommendation but what I will do is just add all the books that I have read and am currently reading and sometime in the future
+    I'll give my ratings and 2 cents about each book.</p>
+    <ul>
+      <li>Awareness By Anthony De Mello</li>
+    </ul>
   </Layout>
 )

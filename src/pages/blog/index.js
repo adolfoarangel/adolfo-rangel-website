@@ -9,10 +9,9 @@ const BlogList = styled.div`
 `
 
 const BlogContainer = styled.div`
-  border-bottom: solid;
-  border-color: lightgrey;
-  border-width: thin;
-  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  max-height: 400px;
 `
 
 const BlogLink = styled(Link)`
@@ -27,35 +26,9 @@ const BlogLink = styled(Link)`
 export default () => (
   <Layout>
     <Header headerText="Latest Post Somethignn"/>
+
+
     <BlogList>
-      <BlogLink to="/blog/2020-time-to-come-out-and-say-it">
-        <BlogContainer>
-          <h2>2020 Time to come out and say it!</h2>
-          <h3>Setting some goals so that everyone can keep me on track</h3>
-        </BlogContainer>
-      </BlogLink>
-
-      <BlogLink to="/blog/2020-time-to-come-out-and-say-it">
-        <BlogContainer>
-          <h2>2020 Time to come out and say it!</h2>
-          <h3>Setting some goals so that everyone can keep me on track</h3>
-        </BlogContainer>
-      </BlogLink>
-
-      <BlogLink to="/blog/2020-time-to-come-out-and-say-it">
-        <BlogContainer>
-          <h2>2020 Time to come out and say it!</h2>
-          <h3>Setting some goals so that everyone can keep me on track</h3>
-        </BlogContainer>
-      </BlogLink>
-
-      <BlogLink to="/blog/2020-time-to-come-out-and-say-it">
-        <BlogContainer>
-          <h2>2020 Time to come out and say it!</h2>
-          <h3>Setting some goals so that everyone can keep me on track</h3>
-        </BlogContainer>
-      </BlogLink>
-
       <BlogLink to="/blog/2020-time-to-come-out-and-say-it">
         <BlogContainer>
           <h2>2020 Time to come out and say it!</h2>
