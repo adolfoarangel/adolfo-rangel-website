@@ -12,8 +12,8 @@ const darkTheme = {
 }
 
 const Container = styled.div`
-   position: absolute;
-   top: 10vh;
+  position: absolute;
+  top: 10vh;
 `
 
 const GlobalStyle = createGlobalStyle`
@@ -41,9 +41,7 @@ export default ({ children }) => (
       <GlobalStyle />
       <TemplateContainer>
         <Nav />
-        <Container>
-          {children}
-        </Container>
+        <Container>{children}</Container>
       </TemplateContainer>
     </React.Fragment>
   </ThemeProvider>

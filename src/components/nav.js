@@ -8,32 +8,32 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${props => props.theme.backgroundColor}; 
+  background-color: ${props => props.theme.backgroundColor};
   position: fixed;
   width: 96vw;
   top: 0;
-  z-index: 3; 
+  z-index: 3;
   height: 10vh;
 `
 
 const FullScreenMenu = styled.div`
   display: ${props => (props.trigger ? "flex" : "none")};
-  background-color: ${props => props.theme.backgroundColor}; 
+  background-color: ${props => props.theme.backgroundColor};
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  position:fixed;
-  z-index:2;
-  padding:0;
-  margin:0;
-  top:0;
-  left:0;
+  position: fixed;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 `
 
 const RoutingLink = styled(Link)`
-  font-size: 32px; 
+  font-size: 32px;
   text-shadow: none;
   background-image: none;
   text-decoration: none;
@@ -53,14 +53,13 @@ const ListLinkUl = styled.ul`
   display: flex;
   flex-direction: column;
   padding: 0px;
-  width: 100%; 
+  width: 100%;
 `
 
 const ListLinkLi = styled.li`
   display: inline-block;
   text-align: center;
   margin-top: 10vh;
-  
 `
 
 const ListLink = props => (

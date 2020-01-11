@@ -4,23 +4,33 @@ import { Header, SubHeader } from "../components/header"
 import styled from "styled-components"
 
 const Paragraph = styled.p`
-    line-height: 1.5rem
+  line-height: 1.5rem;
 `
 
 export default () => (
   <Layout>
     <Header headerText="Recommendations" />
-    <Paragraph>I'm constantly consuming some type of content, it could be anything from a podcast to a youtube video. And most of the time I try to curate a list so that I can send it to every one I know would
-        appreciate it. This is my list.. I'll be updating it with the latest content and also maybe make some type of rating system for it so everyone knows that to look at first</Paragraph>
+    <Paragraph>
+      I'm constantly consuming some type of content, it could be anything from a
+      podcast to a youtube video. And most of the time I try to curate a list so
+      that I can send it to every one I know would appreciate it. This is my
+      list.. I'll be updating it with the latest content and also maybe make
+      some type of rating system for it so everyone knows that to look at first
+    </Paragraph>
 
-    <SubHeader headerText="Podcast"/>
-    <Paragraph> Podcasts are definitely my favorite content medium. It so simple to put it on and start your day. and its also the simplest to stay up to date with some of your favorite individuals and topics.
-        Below is a list of podcasts that I would definitely checkout if I was you!</Paragraph>
+    <SubHeader headerText="Podcast" />
+    <Paragraph>
+      {" "}
+      Podcasts are definitely my favorite content medium. It so simple to put it
+      on and start your day. and its also the simplest to stay up to date with
+      some of your favorite individuals and topics. Below is a list of podcasts
+      that I would definitely checkout if I was you!
+    </Paragraph>
 
     <h3>Code</h3>
     <ul>
-        <li>Syntex</li>
-        <li>Software Engineering Radio</li>
+      <li>Syntex</li>
+      <li>Software Engineering Radio</li>
     </ul>
 
     <h3>Entrepreneurship</h3>
@@ -46,9 +56,13 @@ export default () => (
       <li>The Joe Rogan Experience</li>
     </ul>
 
-    <SubHeader headerText="Books"/>
-    <p>Currently I believe I haven't read enough books to really give a good recommendation but what I will do is just add all the books that I have read and am currently reading and sometime in the future
-    I'll give my ratings and 2 cents about each book.</p>
+    <SubHeader headerText="Books" />
+    <p>
+      Currently I believe I haven't read enough books to really give a good
+      recommendation but what I will do is just add all the books that I have
+      read and am currently reading and sometime in the future I'll give my
+      ratings and 2 cents about each book.
+    </p>
     <ul>
       <li>Awareness By Anthony De Mello</li>
     </ul>

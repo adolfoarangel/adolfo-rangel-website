@@ -7,7 +7,7 @@ const ParentLinkStyle = styled(Link)`
 `
 
 const StyledHeader = styled.h1`
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: 600;
 `
 
@@ -17,33 +17,40 @@ const StyledSubHeader = styled.h2`
 `
 
 const HeaderContainer = styled.div`
-  display: flex; 
+  display: flex;
   align-items: center;
 `
 
 const ParentSpan = styled.span`
-  font-size: 32px; 
+  font-size: 32px;
   margin-right: 10px;
 `
 
 const ChildSpan = styled.span`
-  font-size: 28px; 
+  font-size: 28px;
   text-decoration: underline;
   color: #14ffec;
 `
 
-const Header = props => <>
-  <StyledHeader>{props.headerText}</StyledHeader>
-</>
+const Header = props => (
+  <>
+    <StyledHeader>{props.headerText}</StyledHeader>
+  </>
+)
 
-const SubHeader = props => <>
-  <StyledSubHeader>{props.headerText}</StyledSubHeader>
-</>
+const SubHeader = props => (
+  <>
+    <StyledSubHeader>{props.headerText}</StyledSubHeader>
+  </>
+)
 
-const BlogHeader = props => <HeaderContainer>
-  <ParentLinkStyle to={props.parentRoute}><ParentSpan>{props.parentText} ></ParentSpan></ParentLinkStyle>
-  <ChildSpan>{props.childText}</ChildSpan>
-</HeaderContainer>
+const BlogHeader = props => (
+  <HeaderContainer>
+    <ParentLinkStyle to={props.parentRoute}>
+      <ParentSpan>{props.parentText} ></ParentSpan>
+    </ParentLinkStyle>
+    <ChildSpan>{props.childText}</ChildSpan>
+  </HeaderContainer>
+)
 
-
-export {Header, SubHeader, BlogHeader};
+export { Header, SubHeader, BlogHeader }

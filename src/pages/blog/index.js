@@ -4,9 +4,7 @@ import Layout from "../../components/layout"
 import { Header } from "../../components/header"
 import styled from "styled-components"
 
-const BlogList = styled.div`
-
-`
+const BlogList = styled.div``
 
 const BlogContainer = styled.div`
   background-color: white;
@@ -15,17 +13,17 @@ const BlogContainer = styled.div`
 `
 
 const BlogLink = styled(Link)`
-  color: white; 
+  color: white;
   text-decoration: none;
-  
-  &:hover { 
+
+  &:hover {
     color: #14ffec;
   }
 `
 
 export default () => (
   <Layout>
-    <Header headerText="Latest Post Somethignn"/>
+    <Header headerText="Latest Post Somethignn" />
     <BlogList>
       <BlogLink to="/blog/2020-time-to-come-out-and-say-it">
         <BlogContainer>

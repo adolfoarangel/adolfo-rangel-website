@@ -4,21 +4,20 @@ import Layout from "../components/layout"
 import { Header } from "../components/header"
 
 const Hero = styled.div`
-  height: 90vh; 
+  height: 90vh;
   width: 100vw;
-  display: flex;  
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `
 
 const WidthControl = styled.div`
-padding: 20px;
-text-align:center;
+  padding: 20px;
+  text-align: center;
 `
 
 export default () => {
-
   return (
     <Layout>
       <Hero>
