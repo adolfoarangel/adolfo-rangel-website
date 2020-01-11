@@ -11,12 +11,20 @@ const darkTheme = {
   headingColor: "#14ffec",
 }
 
+const Container = styled.div`
+   position: absolute;
+   top: 10vh;
+`
+
 const GlobalStyle = createGlobalStyle`
-  body {
-    box-sizing: content-box; 
-    font-family: "eurostile", sans-serif;
+  *, *::before,*::after { box-sizing: border-box; }
+
+  body {  
+    font-family: 'Courier Prime', monospace;
     background-color: ${props => props.theme.backgroundColor}; 
     color: ${props => props.theme.fontColor} ;
+    margin: 0;
+    padding: 2vw;
   }
 
   a { 
@@ -24,7 +32,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 const TemplateContainer = styled.div`
-  max-width: 1024px;
   margin: auto;
 `
 
@@ -34,7 +41,9 @@ export default ({ children }) => (
       <GlobalStyle />
       <TemplateContainer>
         <Nav />
-        {children}
+        <Container>
+          {children}
+        </Container>
       </TemplateContainer>
     </React.Fragment>
   </ThemeProvider>

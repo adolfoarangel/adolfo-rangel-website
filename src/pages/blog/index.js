@@ -26,8 +26,6 @@ const BlogLink = styled(Link)`
 export default () => (
   <Layout>
     <Header headerText="Latest Post Somethignn"/>
-
-
     <BlogList>
       <BlogLink to="/blog/2020-time-to-come-out-and-say-it">
         <BlogContainer>

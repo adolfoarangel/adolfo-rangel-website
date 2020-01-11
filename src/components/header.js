@@ -7,7 +7,7 @@ const ParentLinkStyle = styled(Link)`
 `
 
 const StyledHeader = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 600;
 `
 
