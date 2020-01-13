@@ -12,6 +12,7 @@ const darkTheme = {
 }
 
 const Container = styled.div`
+  width: 100%;
   position: absolute;
   top: 10vh;
 `

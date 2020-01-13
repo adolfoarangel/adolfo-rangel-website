@@ -5,32 +5,26 @@ import { Header, BlogHeader, BlogDescription } from "../../components/header"
 import styled from "styled-components"
 import blogCardImage from "../../../public/Images/BridgewWebsite.jpg"
 
-
-const BlogCard = styled.div` 
-  overflow: auto; 
-  height: 30vh;
-  width: 96vw;
-  background: url(${blogCardImage}); 
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  position: relative;
-  margin-bottom: 2vh;
-  
-  @media (max-width: 768px) {
-    height: 40vh;
-  }
+const BlogContainer = styled.div`
+  display: flex; 
+  flex-wrap: wrap;
 `
 
-const BlogCardLayer = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(50, 50, 50, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 5vh 5vw;
+const BlogCard = styled.div` 
+  background-color: black;
+  margin: 16px;
+  padding: 16px;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 8px 10px 15px 0.5px rgba(122,122,122,0.6);
+  
+  @media (min-width: 768px) {
+    max-width: 300px;
+  }
+  
+  @media (min-width: 1024px) {
+    max-width: 400px;
+  }
 `
 
 const ParentLinkStyle = styled(Link)`
@@ -39,38 +33,31 @@ const ParentLinkStyle = styled(Link)`
 
 export default () => (
   <Layout>
-    <ParentLinkStyle>
-      <BlogCard>
-        <BlogCardLayer>
+    <BlogContainer>
+      <ParentLinkStyle to="/blog/testblog/">
+        <BlogCard>
           <BlogHeader headerText="Portfolio In a Nutshell"/>
           <BlogDescription headerText="This is how I built and designed my portfolio"/>
-        </BlogCardLayer>
-      </BlogCard>
-    </ParentLinkStyle>
-    <Header headerText="Some other stuff I wrote" />
-    <ParentLinkStyle>
-      <BlogCard>
-        <BlogCardLayer>
+        </BlogCard>
+      </ParentLinkStyle>
+      <ParentLinkStyle>
+        <BlogCard>
           <BlogHeader headerText="Portfolio In a Nutshell"/>
           <BlogDescription headerText="This is how I built and designed my portfolio"/>
-        </BlogCardLayer>
-      </BlogCard>
-    </ParentLinkStyle>
-    <ParentLinkStyle>
-      <BlogCard>
-        <BlogCardLayer>
+        </BlogCard>
+      </ParentLinkStyle>
+      <ParentLinkStyle>
+        <BlogCard>
           <BlogHeader headerText="Portfolio In a Nutshell"/>
           <BlogDescription headerText="This is how I built and designed my portfolio"/>
-        </BlogCardLayer>
-      </BlogCard>
-    </ParentLinkStyle>
-    <ParentLinkStyle>
-      <BlogCard>
-        <BlogCardLayer>
+        </BlogCard>
+      </ParentLinkStyle>
+      <ParentLinkStyle>
+        <BlogCard>
           <BlogHeader headerText="Portfolio In a Nutshell"/>
           <BlogDescription headerText="This is how I built and designed my portfolio"/>
-        </BlogCardLayer>
-      </BlogCard>
-    </ParentLinkStyle>
+        </BlogCard>
+      </ParentLinkStyle>
+    </BlogContainer>
   </Layout>
 )

@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { Header, SubHeader } from "../components/header"
+import TextBoundary from "../components/TextBoundary"
 import styled from "styled-components"
 
 const Paragraph = styled.p`
@@ -9,6 +10,7 @@ const Paragraph = styled.p`
 
 export default () => (
   <Layout>
+    <TextBoundary>
     <Header headerText="Recommendations" />
     <Paragraph>
       I'm constantly consuming some type of content, it could be anything from a
@@ -66,5 +68,6 @@ export default () => (
     <ul>
       <li>Awareness By Anthony De Mello</li>
     </ul>
+    </TextBoundary>
   </Layout>
 )
