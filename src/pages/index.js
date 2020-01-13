@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import { Header } from "../components/header"
+import { Header, SubHeader} from "../components/header"
 
 const Hero = styled.div`
   height: 90vh;
-  width: 100vw;
+  width: 96vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,8 +22,8 @@ export default () => {
     <Layout>
       <Hero>
         <WidthControl>
-          <Header headerText="Welcome to my space in the world" />
-          <Header headerText="where I can share and create everything I want " />
+          <Header headerText="Welcome to my space in the world..." />
+          <SubHeader headerText="Where I share the little bits of acknowledge I gain." />
         </WidthControl>
       </Hero>
     </Layout>

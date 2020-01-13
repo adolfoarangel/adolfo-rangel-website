@@ -2,9 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const ParentLinkStyle = styled(Link)`
-  text-decoration: none;
-`
+
 
 const StyledHeader = styled.h1`
   font-size: 2rem;
@@ -16,20 +14,24 @@ const StyledSubHeader = styled.h2`
   font-weight: 400;
 `
 
-const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
+const StyledBlogHeader = styled.h2`
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `
 
-const ParentSpan = styled.span`
-  font-size: 32px;
-  margin-right: 10px;
-`
-
-const ChildSpan = styled.span`
-  font-size: 28px;
-  text-decoration: underline;
-  color: #14ffec;
+const StyledBlogDescription = styled.h2`
+  font-size: 1.75rem;
+  font-weight: 200;
+  color: lightgrey;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `
 
 const Header = props => (
@@ -45,12 +47,15 @@ const SubHeader = props => (
 )
 
 const BlogHeader = props => (
-  <HeaderContainer>
-    <ParentLinkStyle to={props.parentRoute}>
-      <ParentSpan>{props.parentText} ></ParentSpan>
-    </ParentLinkStyle>
-    <ChildSpan>{props.childText}</ChildSpan>
-  </HeaderContainer>
+  <>
+    <StyledBlogHeader>{props.headerText}</StyledBlogHeader>
+  </>
 )
 
-export { Header, SubHeader, BlogHeader }
+const BlogDescription = props => (
+  <>
+    <StyledBlogDescription>{props.headerText}</StyledBlogDescription>
+  </>
+)
+
+export { Header, SubHeader, BlogHeader, BlogDescription }
