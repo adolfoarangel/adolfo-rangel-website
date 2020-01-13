@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import { Header, BlogHeader, BlogDescription } from "../../components/header"
 import styled from "styled-components"
-import blogCardImage from "../../../public/Images/BridgewWebsite.jpg"
 
 const BlogContainer = styled.div`
   display: flex; 
@@ -34,27 +33,15 @@ const ParentLinkStyle = styled(Link)`
 export default () => (
   <Layout>
     <BlogContainer>
-      <ParentLinkStyle to="/blog/testblog/">
+      <ParentLinkStyle to="/blog/images-sucks-so-lets-figure-them-out/">
         <BlogCard>
-          <BlogHeader headerText="Portfolio In a Nutshell"/>
+          <BlogHeader headerText="Images Sucks so Lets Figure Them Out"/>
           <BlogDescription headerText="This is how I built and designed my portfolio"/>
         </BlogCard>
       </ParentLinkStyle>
       <ParentLinkStyle>
         <BlogCard>
-          <BlogHeader headerText="Portfolio In a Nutshell"/>
-          <BlogDescription headerText="This is how I built and designed my portfolio"/>
-        </BlogCard>
-      </ParentLinkStyle>
-      <ParentLinkStyle>
-        <BlogCard>
-          <BlogHeader headerText="Portfolio In a Nutshell"/>
-          <BlogDescription headerText="This is how I built and designed my portfolio"/>
-        </BlogCard>
-      </ParentLinkStyle>
-      <ParentLinkStyle>
-        <BlogCard>
-          <BlogHeader headerText="Portfolio In a Nutshell"/>
+          <BlogHeader headerText="creating-my-portfolio"/>
           <BlogDescription headerText="This is how I built and designed my portfolio"/>
         </BlogCard>
       </ParentLinkStyle>
